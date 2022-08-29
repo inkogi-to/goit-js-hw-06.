@@ -13,7 +13,12 @@ const images = [
         alt: 'Group of Horses Running',
     },
 ];
-for (const image of images) {
-    let imageHtml = `<li class="group"><img src=${image.url} alt=${image.alt}/></li>`;
+
+
+const createGallery = (arr) => {
+    let imageHtml = `<li class="group"><img src=${arr.url} alt=${arr.alt}/></li>`;
     gallery.insertAdjacentHTML('afterbegin', imageHtml)
+
+    return gallery
 }
+images.map(createGallery)

@@ -1,8 +1,11 @@
 const ul = document.querySelector('ul');
 const ingredients = ['Potatoes', 'Mushrooms', 'Garlic', 'Tomatos', 'Herbs', 'Condiments'];
-ingredients.forEach(element => {
+
+const createElementLi = (name) => {
     let li = document.createElement('li');
     li.setAttribute('class', 'item');
-    li.textContent = element;
-    ul.appendChild(li);
-});
+    li.textContent = name;
+    return li
+}
+let element = ingredients.map(element => createElementLi(element))
+ul.append(...element)

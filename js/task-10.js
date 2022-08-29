@@ -27,7 +27,7 @@ function createArrayElements() {
         element.style.backgroundColor = getRandomHexColor()
         element.style.width = sizeDiv + 'px'
         element.style.height = sizeDiv + 'px'
-        
+
     })
 }
 
